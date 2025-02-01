@@ -1,0 +1,7 @@
+{
+  "domain": "nolte_kitchen_lights_ble",
+  "name": "Nolte Kitchen Lights BLE",
+  "dependencies": ["bluetooth_adapters"],
+  "iot_class": "assumed_state",
+  "version": "0.1.0"
+}
