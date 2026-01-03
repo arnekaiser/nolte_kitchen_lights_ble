@@ -62,6 +62,19 @@ class KitchenLight(LightEntity):
         self._color_temp_kelvin = None
 
     @property
+    def unique_id(self):
+        return f"nolte_kitchen_light_{ self._light.mac.replace(':', '_').lower() }"
+
+    @property
+    def device_info(self):
+        return {
+            "identifiers": { ("nolte_kitchen_lights_ble", self._light.mac) },
+            "name": self._name,
+            "manufacturer": "Nolte",
+            "model": "LED-Emotion-Bluetooth-Modul",
+        }
+
+    @property
     def name(self) -> str:
         return self._name
 
